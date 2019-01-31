@@ -2,28 +2,22 @@
 #include<conio.h>
 void main()
 {
-int a[10],n,i,max=0,min;
+int a,i,m=1,f=0;
 clrscr();
-scanf("%d",&n);
-for(i=0;i<n;i++)
+scanf("%d",&a);
+while(a)
 {
-scanf("%d",&a[i]);
-}
-for(i=0;i<n;i++)
+m=m*2;
+if(m==a)
 {
-if(a[i]>max)
-{
-max=a[i];
+f=1;
+break;
 }
+a--;
 }
-min=a[0];
-for(i=0;i<n;i++)
-{
-if(a[i]<min)
-{
-min=a[i];
-}
-}
-printf("%d %d",max,min);
+if(f==1)
+printf("yes");
+else
+printf("no");
 getch();
 }
